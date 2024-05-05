@@ -14,13 +14,15 @@ using VRage.Game.ModAPI.Ingame;
 using VRage.Game.ObjectBuilders.Definitions;
 using SpaceEngineers.Game.ModAPI.Ingame;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
 /*
  * Must be unique per each script project.
  * Prevents collisions of multiple `class Program` declarations.
  * Will be used to detect the ingame script region, whose name is the same.
  */
-namespace AirLockV1 {
+namespace testing {
 
 /*
  * Do not change this declaration because this is the game requirement.
@@ -31,7 +33,12 @@ public sealed class Program : MyGridProgram {
      * Must be same as the namespace. Will be used for automatic script export.
      * The code inside this region is the ingame script.
      */
-    #region AirLockV1
+    #region testing
+
+    /// <summary>
+    /// Airlock script for Space Engineers
+    /// </summary>
+    //
 
     //////////////////////////////////////////////////////////////////////
     /// Configuration section.
@@ -217,6 +224,8 @@ public sealed class Program : MyGridProgram {
         public const string DepressurizeAirlock = "depressurize airlock";
         public const string OpenInnerDoor = "open inner door";
         public const string OpenOuterDoor = "open outer door";
+        public const string EnableInnerDoor = "enable inner door";
+        public const string EnableOuterDoor = "enable outer door";
     }
 
     public static class Command {
@@ -332,5 +341,5 @@ public sealed class Program : MyGridProgram {
         }
     }
 
-    #endregion // AirLockV1
+    #endregion // testing
 }}
